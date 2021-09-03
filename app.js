@@ -17,7 +17,7 @@ app.get('/',(req,res) =>{
 });
 
 app.use('/student', student);
-app.use('/empoyee', employee);
+app.use('/empoyee', employee); 
 app.use('/blog', blog);
 
 app.listen(8090,() => {
