@@ -1,0 +1,14 @@
+doctype html
+html
+   head
+        title My Blog
+   body
+        form(action="/blog/posts", method="post") 
+            textarea(name="blog", cols="30", rows="10")
+            br
+            button Add Blog
+        br
+        each val in allblog
+            div 
+                div #{val.blog}  
+            hr
