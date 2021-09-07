@@ -9,7 +9,15 @@ router.get('/',(req,res) => {
 });
 
 router.post('/posts',(req,res) =>{
+    req.body.like = 0;
     blog.push(req.body);
+    res.render('blog.pug',{
+        allblog : blog
+    });
+});
+
+router.get('/posts/like',(req,res) => {
+    blog[req.query.index].like += 1;
     res.render('blog.pug',{
         allblog : blog
     });

@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var emp = [];
 
-
 router.get('/regemp',(req,res) => {
     res.sendFile(__dirname+'/empreg.html');
 });

@@ -8,14 +8,12 @@ html
                 th Name 
                 th Email 
                 th Phone
-                th City
-                th Technology
-                th Company
-            each val in allstud
+            each val,i in allstud
                 tr
-                    td #{val.name}
+                    td 
+                        //- a(href="/student/detail/"+i) #{val.name}
+                        a(href=`/student/detail/${val.phone}`) #{val.name}
+
                     td #{val.email}
                     td #{val.phone}
-                    td #{val.city}
-                    td #{val.tech}
-                    td #{val.comp}
+                    
